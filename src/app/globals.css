@@ -120,3 +120,16 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Increase vertical space between time slots */
+.fc .fc-timegrid-slot {
+  height: 80px !important; /* Adjust as needed */
+}
+
+.fc .fc-timegrid-slot-label {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-weight: 500;
+}
+
+

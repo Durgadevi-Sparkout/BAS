@@ -15,7 +15,7 @@ import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
 import { Select, SelectTrigger, SelectContent, SelectItem, SelectValue } from '@/components/ui/select'
 
-export default function EventFormDialog({ open, onOpenChange, onAddEvent, defaultStart, defaultEnd }) {
+export default function EventFormDialog({ open, onOpenChange, onAddEvent, defaultStart, defaultEnd, defaultTitle, defaultDescription, defaultVariant }) {
   const [formData, setFormData] = useState({
     title: '',
     start: '',
@@ -30,6 +30,9 @@ export default function EventFormDialog({ open, onOpenChange, onAddEvent, defaul
         ...prev,
         start: defaultStart || '',
         end: defaultEnd || '',
+        title: defaultTitle || '',
+        description: defaultDescription || '',
+        variant: defaultVariant || 'blue',
       }))
     }
   }, [open, defaultStart, defaultEnd])
@@ -50,14 +53,14 @@ export default function EventFormDialog({ open, onOpenChange, onAddEvent, defaul
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[500px]">
         <DialogHeader>
-          <DialogTitle>Add New Event</DialogTitle>
-          <p className="text-sm text-muted-foreground">Create a new event for your calendar.</p>
+          <DialogTitle>Add New Boooking</DialogTitle>
+          <p className="text-sm text-muted-foreground">Create a new Boooking for your calendar.</p>
         </DialogHeader>
         <div className="grid gap-4 py-4">
           <div>
-            <Label>Title</Label>
+            <Label>Name</Label>
             <Input
-              placeholder="Enter a title"
+              placeholder="Enter a name"
               value={formData.title}
               onChange={(e) => handleChange('title', e.target.value)}
             />
@@ -78,7 +81,7 @@ export default function EventFormDialog({ open, onOpenChange, onAddEvent, defaul
               onChange={(e) => handleChange('end', e.target.value)}
             />
           </div>
-          <div>
+          {/* <div>
             <Label>Variant</Label>
             <Select
               value={formData.variant}
@@ -93,7 +96,7 @@ export default function EventFormDialog({ open, onOpenChange, onAddEvent, defaul
                 <SelectItem value="green">🟢 Green</SelectItem>
               </SelectContent>
             </Select>
-          </div>
+          </div> */}
           <div>
             <Label>Description</Label>
             <Textarea
@@ -107,7 +110,7 @@ export default function EventFormDialog({ open, onOpenChange, onAddEvent, defaul
           <Button variant="secondary" onClick={() => onOpenChange(false)}>
             Cancel
           </Button>
-          <Button onClick={handleSubmit}>Create Event</Button>
+          <Button onClick={handleSubmit}>Submit</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
