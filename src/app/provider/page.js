@@ -46,16 +46,14 @@ export default function Provider() {
     const [modalPosition, setModalPosition] = useState(null);
   return (
     <div className="w-full px-6 py-4 bg-white shadow">
-      {/* Search & Filter Bar */}
-      <div className="flex gap-4 items-center justify-start mt-10">
+      <div className="flex gap-4 items-center justify-start mt-10 flex-wrap">
         <Input type="text" placeholder="Search" className="w-[300px]" />
-        <DatePickerDemo />
-        <Button className="bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white px-4 py-2 rounded">
+        <DatePickerDemo className="w-[300px]" />
+        <Button className="bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white px-4 py-2 rounded cursor-pointer">
           Search
         </Button>
       </div>
 
-      {/* Table Title + Component */}
       <div>
         <h1 className="text-2xl font-bold my-5">Booking Details</h1>
         <TableComponent 

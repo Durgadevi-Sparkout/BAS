@@ -73,7 +73,7 @@ export const TableComponent = ({
     <div className="border-2 border-[#fff6] relative rounded-xl md:rounded-2xl">
       <Table className="TableWrap rounded-xl md:rounded-2xl">
         <TableHeader className="sticky top-0 bg-blue-800 text-xs text-gray-700 dark:text-gray-400 z-10 shadow-x rounded-xl md:rounded-2xl">
-          <TableRow className="border-b border-[#ffffff66] hover:bg-[#1f2937]">
+          <TableRow className="border-b border-[#ffffff66] hover:bg-[var(--color-primary-hover)]">
             {THead.map((header, index) => (
               <TableHead
                 key={index}

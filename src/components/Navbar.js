@@ -11,7 +11,7 @@ export default function NavBar() {
       {/* Right: Button */}
       <div>
         <div className="bg-[var(--color-background)] text-[var(--color-foreground)]">
-          <Button className="bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white px-4 py-2 rounded">
+          <Button className="bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white px-4 py-2 rounded cursor-pointer">
             Login
           </Button>
         </div>
