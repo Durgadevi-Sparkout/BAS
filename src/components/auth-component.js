@@ -54,22 +54,6 @@ export default function AuthPage() {
                 </div>
                 <Button type="submit" className="w-full">Log in</Button>
               </form>
-              <div className="relative my-6">
-                <div className="absolute inset-0 flex items-center">
-                  <span className="w-full border-t"></span>
-                </div>
-                <div className="relative flex justify-center text-xs uppercase">
-                  <span className="bg-background px-2 text-muted-foreground">or</span>
-                </div>
-              </div>
-              <div className="space-y-2">
-                <Button variant="outline" className="w-full flex items-center gap-2">
-                  <FaGoogle className="h-5 w-5" /> Sign in with Google
-                </Button>
-                <Button variant="outline" className="w-full flex items-center gap-2">
-                  <FaApple className="h-5 w-5" /> Sign in with Apple
-                </Button>
-              </div>
             </TabsContent>
 
             <TabsContent value="signup">
@@ -101,22 +85,6 @@ export default function AuthPage() {
                 />
                 <Button type="submit" className="w-full">Create account</Button>
               </form>
-              <div className="relative my-6">
-                <div className="absolute inset-0 flex items-center">
-                  <span className="w-full border-t"></span>
-                </div>
-                <div className="relative flex justify-center text-xs uppercase">
-                  <span className="bg-background px-2 text-muted-foreground">or</span>
-                </div>
-              </div>
-              <div className="space-y-2">
-                <Button variant="outline" className="w-full flex items-center gap-2">
-                  <FaGoogle className="h-5 w-5" /> Sign in with Google
-                </Button>
-                <Button variant="outline" className="w-full flex items-center gap-2">
-                  <FaApple className="h-5 w-5" /> Sign in with Apple
-                </Button>
-              </div>
             </TabsContent>
           </Tabs>
         </CardContent>

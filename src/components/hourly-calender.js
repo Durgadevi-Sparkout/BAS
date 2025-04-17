@@ -206,7 +206,7 @@ export default function CalendarPage({ mode = 'hourly' }) {
                             onSelect={handleDatePickerSelect}
                             className="rounded-md border"
                         />
-                        <p className="text-muted-foreground italic mt-4">
+                        <div className="text-muted-foreground italic mt-4">
                         <h5 className="font-semibold mb-2">Bookings on {selectedDate.toDateString()}:</h5>
 
                             {
@@ -234,7 +234,7 @@ export default function CalendarPage({ mode = 'hourly' }) {
                                     </div>
                                 ))
                             }
-                        </p>
+                        </div>
                     </div>
                 )}
             </div>
